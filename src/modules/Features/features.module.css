@@ -1,0 +1,172 @@
+.features {
+	margin-top: 120px;
+	background-color: var(--bg-primary);
+}
+
+.container {
+	margin-block: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.currencies {
+	grid-column: span 12;
+	gap: 42px;
+}
+
+.currenciesText {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.currenciesList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(56px, 96px));
+	justify-content: space-between;
+	row-gap: 10px;
+}
+
+.listItem {
+	display: grid;
+	gap: 8px;
+	text-align: center;
+}
+
+.listItem img {
+	animation: 0.8s scale alternate ease-in-out;
+}
+
+.featuresTop {
+	display: flex;
+	gap: 20px;
+}
+
+.innerLeft {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 488px;
+}
+
+.startCard {
+	gap: 16px;
+}
+
+.startCardTextContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.exchangeCard {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.exchangeTextWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.paymentCard {
+	gap: 24px;
+}
+
+.paymentCardTextWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.featuresBot {
+	display: flex;
+	gap: 20px;
+}
+
+.anonymousPayments {
+	padding: 42px;
+	gap: 20px;
+	max-width: 488px;
+}
+
+@keyframes scale {
+	from {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(1.1);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 1250px) {
+	.featuresTop {
+		flex-direction: column;
+	}
+
+	.innerLeft {
+		max-width: 100%;
+		flex-direction: row;
+	}
+
+	.paymentCard {
+		align-items: center;
+	}
+	.featuresBot {
+		flex-direction: column;
+	}
+	.anonymousPayments {
+		max-width: 100%;
+		align-items: center;
+	}
+}
+
+@media (max-width: 900px) {
+	.innerLeft {
+		flex-direction: column;
+	}
+	.startCard {
+		align-items: center;
+	}
+	.exchangeCard {
+		align-items: center;
+	}
+}
+
+@media (max-width: 620px) {
+	.features {
+		margin-top: 80px;
+	}
+
+	.anonymousPayments {
+		padding: 32px;
+	}
+}
+
+@media (max-width: 420px) {
+	.currenciesList {
+		gap: 10px;
+	}
+	.currenciesList svg {
+		width: 56px;
+	}
+}
+
+@media (max-width: 420px) {
+	.currenciesList {
+		grid-template-columns: repeat(auto-fill, 56px);
+		row-gap: 10px;
+	}
+	.currenciesList span {
+		display: none;
+	}
+}

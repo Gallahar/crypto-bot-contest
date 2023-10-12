@@ -1,0 +1,20 @@
+.externalLink {
+	font-size: 2rem;
+	line-height: 120%;
+	font-weight: 500;
+	color: var(--general);
+	transition: color 0.2s ease-out;
+}
+
+.externalLink:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	text-underline-offset: 2px;
+	color: var(--deep-blue);
+}
+
+@media (max-width: 620px) {
+	.externalLink {
+		font-size: 1.8rem;
+	}
+}

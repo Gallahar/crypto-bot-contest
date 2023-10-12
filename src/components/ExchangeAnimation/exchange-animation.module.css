@@ -1,0 +1,133 @@
+.animationWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.cryptoCurrencies {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.cryptoCurrencies svg rect {
+	stroke-width: 4px;
+	stroke: var(--bg-primary);
+	filter: drop-shadow(0px 0px 8px rgba(182, 186, 191, 0.04))
+		drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.02));
+}
+
+.cryptoCurrencies svg path {
+	opacity: 0;
+}
+
+.active svg path {
+	animation: 1.5s appear forwards infinite;
+}
+
+.currencyItem {
+	width: 116px;
+	height: 116px;
+}
+
+.currencyItem:not(:first-child) {
+	margin-left: -62px;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.currencyBackground {
+	position: relative;
+	border-radius: 900px;
+	width: 96px;
+	height: 96px;
+	color: var(--white);
+	background: var(--bg-currency);
+	box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04),
+		0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.currency {
+	color: currentColor;
+	text-align: center;
+	font-size: 5.6rem;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: -1.68px;
+	display: none;
+}
+
+.activeCurrency {
+	display: block;
+	animation: 1.5s appear forwards infinite;
+}
+
+.btnSwap {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -30%;
+	padding: 4px 12px;
+	border-radius: 19px;
+	border: 1px solid var(--bg-primary);
+	background: var(--bg-swap-btn);
+	backdrop-filter: blur(8px);
+	display: flex;
+	flex-direction: column;
+}
+
+.btnSwapIcon path {
+	stroke-width: 2px;
+	stroke: var(--stroke-color);
+}
+
+.btnSwapIcon:first-child {
+	margin-bottom: -3px;
+}
+
+@media (max-width: 620px) {
+	.currencyBackground {
+		width: 66px;
+		height: 66px;
+	}
+	.currency {
+		font-size: 3.8rem;
+	}
+
+	.currencyItem {
+		width: 81px;
+		height: 81px;
+	}
+
+	.cryptoCurrencies svg rect {
+		stroke-width: 3px;
+	}
+
+	.currencyItem:not(:first-child) {
+		margin-left: -52px;
+	}
+
+	.btnSwap {
+		padding: 3px 8px;
+		border-radius: 13px;
+		left: -27%;
+	}
+
+	.btnSwapIcon {
+		width: 15px;
+		height: 8px;
+	}
+	.btnSwapIcon:first-child {
+		margin-bottom: -1px;
+	}
+}

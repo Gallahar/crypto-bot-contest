@@ -1,0 +1,26 @@
+.footer {
+	background-color: var(--dark-blue);
+	padding: 120px 0 40px;
+}
+
+.footerContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.copyright {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 120%;
+	color: var(--white);
+}
+
+@media (max-width: 420px) {
+	.footer {
+		padding: 76px 0 32px;
+	}
+	.copyright {
+		font-size: 1.8rem;
+	}
+}

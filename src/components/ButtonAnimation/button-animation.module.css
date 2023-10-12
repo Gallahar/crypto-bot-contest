@@ -1,0 +1,99 @@
+.container {
+	position: relative;
+	padding: 37px 0 53px;
+	text-align: center;
+	min-width: 376px;
+}
+
+.button {
+	margin-inline: auto;
+	width: 220px;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	gap: 5px;
+	font-size: 2.2rem;
+	color: var(--text-primary);
+	font-weight: 500;
+	line-height: 120%;
+	padding: 18px 39px;
+	border-radius: 17px;
+	background: var(--bg-animation-btn);
+
+	animation: 3s buttonAnimation ease-in-out alternate infinite;
+}
+
+.cursor {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	animation: 3s cursorMove ease-in-out alternate infinite;
+}
+
+.cursor path {
+	stroke: var(--bg-primary);
+}
+
+@keyframes buttonAnimation {
+	0% {
+		background: var(--bg-animation-btn);
+		transform: scale(1);
+	}
+	50% {
+		background: var(--bg-animation-btn);
+		transform: scale(1);
+	}
+	80% {
+		background: var(--bg-animation-btn--active);
+		transform: scale(1);
+	}
+	90% {
+		background: var(--bg-animation-btn--active);
+		transform: scale(1.1);
+	}
+
+	100% {
+		background: var(--bg-animation-btn--active);
+		transform: scale(1.1);
+	}
+}
+
+@keyframes cursorMove {
+	0% {
+		right: 0;
+		bottom: 0;
+	}
+	50% {
+		right: 0;
+		bottom: 0;
+	}
+	75% {
+		right: 59px;
+		bottom: 23px;
+	}
+	100% {
+		right: 59px;
+		bottom: 23px;
+	}
+}
+
+@media (max-width: 450px) {
+	@keyframes cursorMove {
+		0% {
+			right: 20px;
+			bottom: 0px;
+		}
+		50% {
+			right: 20px;
+			bottom: 0px;
+		}
+		75% {
+			right: 59px;
+			bottom: 23px;
+		}
+		100% {
+			right: 59px;
+			bottom: 23px;
+		}
+	}
+}

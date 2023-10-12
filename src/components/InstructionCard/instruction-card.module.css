@@ -1,0 +1,106 @@
+.instructionCard {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 15px;
+	align-items: center;
+}
+
+.instructionInfo {
+	justify-content: flex-start;
+	display: flex;
+	max-width: 488px;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.numberWrapper {
+	background: var(--bg-number);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+}
+
+.numberWrapper .number {
+	color: var(--text-number);
+}
+
+.textWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sliderCard {
+	border-radius: 40px;
+	width: 100%;
+	max-width: 590px;
+}
+
+.ul {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	list-style-position: inside;
+}
+
+.ol {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	list-style-position: inside;
+}
+.ul p {
+	display: inline;
+}
+.ol p {
+	display: inline;
+}
+.ul li::marker {
+	color: var(--general);
+	font-size: 2rem;
+}
+
+.ol li::marker {
+	font-size: 2rem;
+}
+
+@media (min-width: 1130px) {
+	.instructionCard:nth-child(odd) {
+		flex-direction: row-reverse;
+	}
+}
+
+@media (max-width: 1135px) {
+	.instructionCard {
+		justify-content: center;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 420px) {
+	.instructionCard {
+		flex-direction: column-reverse;
+		gap: 16px;
+	}
+
+	.instructionInfo {
+		min-width: unset;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.numberWrapper {
+		width: 36px;
+		height: 36px;
+		flex-shrink: 0;
+	}
+
+	.numberWrapper .number {
+		font-size: 2.4rem;
+	}
+}

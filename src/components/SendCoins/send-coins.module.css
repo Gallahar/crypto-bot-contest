@@ -1,0 +1,17 @@
+.sendCoins {
+	padding: 0 42px 42px 42px;
+	gap: 20px;
+	width: 100%;
+}
+
+@media (max-width: 1250px) {
+	.sendCoins {
+		align-items: center;
+	}
+}
+
+@media (max-width: 620px) {
+	.sendCoins {
+		padding: 0 32px 32px 32px;
+	}
+}

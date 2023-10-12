@@ -1,0 +1,57 @@
+.cryptoPay {
+	background-color: var(--bg-primary);
+	padding-block: 120px;
+}
+
+.containerInner {
+	width: 100%;
+	padding: 147px 0 147px 80px;
+	background: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
+	display: flex;
+	align-items: center;
+	border-radius: 40px;
+	background-image: url('/crypto-pay/cryptoPayBgPc.webp');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.textWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 385px;
+	gap: 32px;
+	flex: 1;
+}
+
+.textWrapper * {
+	color: var(--white);
+}
+
+@media (max-width: 720px) {
+	.containerInner {
+		background-image: url('/crypto-pay/cryptoPayBgMobile.webp');
+		min-height: 514px;
+		border-radius: 24px;
+		background-size: cover;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 28px 32px;
+	}
+}
+
+@media (max-width: 620px) {
+	.cryptoPay {
+		padding-block: 80px;
+	}
+}
+
+@media (max-width: 420px) {
+	.textWrapper {
+		align-items: stretch;
+	}
+	.textWrapper button {
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,23 @@
+.stackedWrapper {
+	border-radius: 50%;
+	width: 92px;
+	height: 92px;
+	position: relative;
+	border: 4px solid var(--bg-primary);
+}
+
+.stackedWrapper:not(:first-child) {
+	margin-left: var(--negated-margin);
+}
+
+@media (max-width: 620px) {
+	.stackedWrapper {
+		width: 61px;
+		height: 61px;
+		border: 2px solid var(--bg-primary);
+	}
+
+	.stackedWrapper:not(:first-child) {
+		margin-left: calc(var(--negated-margin) + 16px);
+	}
+}

@@ -1,0 +1,42 @@
+.useCases {
+	margin-top: 120px;
+	background-color: var(--dark-blue);
+	padding-block: 196px;
+}
+
+.useCasesContainer {
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.cardsContainer {
+	max-height: 488px;
+	overflow: hidden;
+	border-radius: 40px;
+}
+
+@media (max-width: 1060px) {
+	.useCases {
+		padding-block: 140px;
+	}
+
+	.useCasesContainer {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 620px) {
+	.useCases {
+		margin-top: 80px;
+		padding-block: 32px;
+	}
+}
+
+@media (max-width: 520px) {
+	.cardsContainer {
+		max-height: 335px;
+	}
+}
