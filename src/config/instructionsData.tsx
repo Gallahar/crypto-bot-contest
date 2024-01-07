@@ -11,7 +11,7 @@ export const instructionsData = [
 		variant: 'purple',
 		imgTop: instrImg1,
 		imgBot: instrSvg1,
-		instructionsList: [
+		instructionList: [
 			<li key='@CryptoBot'>
 				<BaseText variant='secondary'>
 					Open <ExternalLink>@CryptoBot</ExternalLink>
@@ -40,7 +40,7 @@ export const instructionsData = [
 		subtitle: 'Requests are only served over HTTPS To pass parameters use:',
 		variant: 'yellow',
 		imgTop: instrImg2,
-		instructionsList: [
+		instructionList: [
 			<li key='url'>
 				<ExternalLink>URL query string</ExternalLink>
 			</li>,
@@ -61,7 +61,7 @@ export const instructionsData = [
 		subtitle: 'There are two ways of receiving updates for your app:',
 		variant: 'blue',
 		imgBot: instrImg3,
-		instructionsList: [
+		instructionList: [
 			<li key='getInvoices'>
 				<BaseText variant='secondary'>
 					<ExternalLink>getInvoices</ExternalLink> method to get a list of
